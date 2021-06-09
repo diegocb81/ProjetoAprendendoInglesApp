@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setElevation(0);
+
         smartTabLayout = findViewById(R.id.smartTabLayout);
         viewPager = findViewById(R.id.viewPager);
 
@@ -34,5 +36,9 @@ public class MainActivity extends AppCompatActivity {
                     .add("Vogais", VogaisFragment.class)
                 .create()
         );
+
+        viewPager.setAdapter(adapter);
+        smartTabLayout.setViewPager(viewPager);
+
     }
 }
