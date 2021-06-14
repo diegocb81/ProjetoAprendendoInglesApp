@@ -95,6 +95,26 @@ public class BichosFragment extends Fragment implements View.OnClickListener {
                 mediaPlayer = MediaPlayer.create(getActivity(), R.raw.dog);
                 tocarSom();
                 break;
+            case R.id.buttonGato:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.cat);
+                tocarSom();
+                break;
+            case R.id.buttonLeao:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.lion);
+                tocarSom();
+                break;
+            case R.id.buttonMacaco:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.monkey);
+                tocarSom();
+                break;
+            case R.id.buttonOvelha:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.sheep);
+                tocarSom();
+                break;
+            case R.id.buttonVaca:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.cow);
+                tocarSom();
+                break;
         }
     }
 
