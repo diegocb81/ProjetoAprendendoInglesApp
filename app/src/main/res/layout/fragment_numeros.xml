@@ -21,7 +21,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.87" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/buttomUm"
         android:layout_width="130dp"
         android:layout_height="130dp"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/buttonDois"
         android:layout_width="130dp"
         android:layout_height="130dp"
@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/buttonTres"
         android:layout_width="130dp"
         android:layout_height="130dp"
@@ -54,7 +54,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/buttomUm" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/buttonQuatro"
         android:layout_width="130dp"
         android:layout_height="130dp"
@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintTop_toBottomOf="@+id/buttonDois" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/buttonCinco"
         android:layout_width="130dp"
         android:layout_height="130dp"
@@ -76,7 +76,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/buttonTres" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/buttonSeis"
         android:layout_width="130dp"
         android:layout_height="130dp"

@@ -1,13 +1,16 @@
 package com.cursoandroid.projetoaprendendoinglesapp.Fragments;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.cursoandroid.projetoaprendendoinglesapp.R;
 
@@ -16,7 +19,7 @@ import com.cursoandroid.projetoaprendendoinglesapp.R;
  * Use the {@link BichosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BichosFragment extends Fragment {
+public class BichosFragment extends Fragment implements View.OnClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,8 +30,9 @@ public class BichosFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private ImageButton buttonCao, buttonGato, buttonLeao,
+    private ImageView buttonCao, buttonGato, buttonLeao,
                         buttonMacaco, buttonOvelha, buttonVaca;
+    private MediaPlayer mediaPlayer;
 
     public BichosFragment() {
         // Required empty public constructor
@@ -74,6 +78,36 @@ public class BichosFragment extends Fragment {
         buttonOvelha = view.findViewById(R.id.buttonOvelha);
         buttonVaca = view.findViewById(R.id.buttonVaca);
 
+        buttonCao.setOnClickListener(this);
+        buttonGato.setOnClickListener(this);
+        buttonLeao.setOnClickListener(this);
+        buttonMacaco.setOnClickListener(this);
+        buttonOvelha.setOnClickListener(this);
+        buttonVaca.setOnClickListener(this);
+
         return view;
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.buttonCao:
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.dog);
+                tocarSom();
+                break;
+        }
+    }
+
+    public void tocarSom(){
+        if (mediaPlayer != null){
+            mediaPlayer.start();
+
+            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.release();
+                }
+            });
+        }
     }
 }
