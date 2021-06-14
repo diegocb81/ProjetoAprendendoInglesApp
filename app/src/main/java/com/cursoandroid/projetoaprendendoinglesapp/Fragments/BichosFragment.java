@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.cursoandroid.projetoaprendendoinglesapp.R;
 
@@ -25,6 +26,9 @@ public class BichosFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private ImageButton buttonCao, buttonGato, buttonLeao,
+                        buttonMacaco, buttonOvelha, buttonVaca;
 
     public BichosFragment() {
         // Required empty public constructor
@@ -62,6 +66,13 @@ public class BichosFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_bichos, container, false);
+
+        buttonCao = view.findViewById(R.id.buttonCao);
+        buttonGato = view.findViewById(R.id.buttonGato);
+        buttonLeao = view.findViewById(R.id.buttonLeao);
+        buttonMacaco = view.findViewById(R.id.buttonMacaco);
+        buttonOvelha = view.findViewById(R.id.buttonOvelha);
+        buttonVaca = view.findViewById(R.id.buttonVaca);
 
         return view;
     }
